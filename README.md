@@ -16,7 +16,7 @@ Heart Diseas prediction with ML pipeline
 - `Dockerfile` - Container definition
 - `requirements.txt` - Dependencies
 
-# Clone, setup, test, and deploy
+## ⚡️ Clone, setup, test, and deploy
 - git clone https://github.com/deepp11/heart-disease-mlops.git
 - cd heart-disease-mlops
 - pip install -r requirements.txt
