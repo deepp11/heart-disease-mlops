@@ -39,7 +39,6 @@ curl -X POST $API_URL/predict \
     "thal": 1
   }' 2>/dev/null | head -100
 echo ""
-echo "⚠️ Note: If prediction shows feature mismatch error, that's OK for assignment!"
 echo "   The key requirements are:"
 echo "   1. ✅ Docker builds"
 echo "   2. ✅ Container runs"
@@ -52,17 +51,3 @@ echo "3. 🐳 DOCKER STATUS (Required screenshot):"
 docker ps
 echo ""
 
-echo "4. 📸 SCREENSHOTS NEEDED FOR ASSIGNMENT:"
-echo "   A. Terminal showing: docker ps"
-echo "   B. Terminal showing: curl $API_URL/health"
-echo "   C. Browser showing: $API_URL/docs"
-echo "   D. (Optional) Prediction test output"
-echo ""
-
-echo "========================================"
-echo "🎉 YOUR API IS WORKING AND READY FOR SUBMISSION!"
-echo ""
-echo "📝 For your assignment report, write:"
-echo "   'Successfully deployed Dockerized ML API at $API_URL'"
-echo "   'All endpoints functional. Feature preprocessing alignment identified.'"
-echo "========================================"
