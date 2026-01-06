@@ -18,6 +18,6 @@ Heart Diseas prediction with ML pipeline
 
 ## 🌐 API Endpoints
 - Health: `curl http://localhost:8000/health`
-- Docs: http://localhost:8000/docs
+- Docs: http://localhost:8080/docs
 
 >>>>>>> ef5f7de (Complete MLOps pipeline: Heart Disease Prediction)
