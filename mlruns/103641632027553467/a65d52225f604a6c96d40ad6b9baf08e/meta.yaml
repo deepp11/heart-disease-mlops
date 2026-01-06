@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/deep/Documents/Projects/MLOps Assignment/mlruns/103641632027553467/a65d52225f604a6c96d40ad6b9baf08e/artifacts
+end_time: 1767613960445
+entry_point_name: ''
+experiment_id: '103641632027553467'
+lifecycle_stage: active
+run_id: a65d52225f604a6c96d40ad6b9baf08e
+run_name: RF_Deep
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1767613956268
+status: 3
+tags: []
+user_id: deep

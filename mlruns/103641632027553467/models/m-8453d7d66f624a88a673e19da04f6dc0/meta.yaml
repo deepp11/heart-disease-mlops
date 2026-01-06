@@ -1,0 +1,10 @@
+artifact_location: file:///Users/deep/Documents/Projects/MLOps Assignment/mlruns/103641632027553467/models/m-8453d7d66f624a88a673e19da04f6dc0/artifacts
+creation_timestamp: 1767613975038
+experiment_id: '103641632027553467'
+last_updated_timestamp: 1767613977282
+model_id: m-8453d7d66f624a88a673e19da04f6dc0
+model_type: null
+name: best_model
+source_run_id: e64a8e86f9db4126ae7d7fde8d20f27c
+status: 2
+status_message: null

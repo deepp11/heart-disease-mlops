@@ -1,0 +1,13 @@
+HEART DISEASE DATASET - EDA SUMMARY
+==================================================
+
+Dataset: UCI Heart Disease (Cleveland)
+Original Samples: 303
+Clean Samples: 297
+Features: 20
+Target: Binary classification (heart disease present/absent)
+
+Class Distribution:
+  No Disease: 160 samples
+  Disease: 137 samples
+  Prevalence: 46.1%

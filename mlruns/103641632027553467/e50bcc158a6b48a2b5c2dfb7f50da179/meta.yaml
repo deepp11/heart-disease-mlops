@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/deep/Documents/Projects/MLOps Assignment/mlruns/103641632027553467/e50bcc158a6b48a2b5c2dfb7f50da179/artifacts
+end_time: 1767613950619
+entry_point_name: ''
+experiment_id: '103641632027553467'
+lifecycle_stage: active
+run_id: e50bcc158a6b48a2b5c2dfb7f50da179
+run_name: LR_WeakReg
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1767613948632
+status: 3
+tags: []
+user_id: deep

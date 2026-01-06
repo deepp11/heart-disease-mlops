@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/deep/Documents/Projects/MLOps Assignment/mlruns/103641632027553467/e64a8e86f9db4126ae7d7fde8d20f27c/artifacts
+end_time: 1767613977286
+entry_point_name: ''
+experiment_id: '103641632027553467'
+lifecycle_stage: active
+run_id: e64a8e86f9db4126ae7d7fde8d20f27c
+run_name: GridSearch_RandomForest
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1767613964196
+status: 3
+tags: []
+user_id: deep

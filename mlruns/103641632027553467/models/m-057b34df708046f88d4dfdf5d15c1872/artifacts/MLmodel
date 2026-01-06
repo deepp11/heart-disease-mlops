@@ -1,0 +1,46 @@
+artifact_path: file:///Users/deep/Documents/Projects/MLOps Assignment/mlruns/103641632027553467/models/m-057b34df708046f88d4dfdf5d15c1872/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.2
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.1
+is_signature_from_type_hint: false
+mlflow_version: 3.8.1
+model_id: m-057b34df708046f88d4dfdf5d15c1872
+model_size_bytes: 790368
+model_uuid: m-057b34df708046f88d4dfdf5d15c1872
+prompts: null
+run_id: 3c1f31fba7154425b12c2eebdd3f69e4
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "age", "required": true}, {"type": "double",
+    "name": "trestbps", "required": true}, {"type": "double", "name": "chol", "required":
+    true}, {"type": "double", "name": "thalach", "required": true}, {"type": "double",
+    "name": "oldpeak", "required": true}, {"type": "boolean", "name": "sex_1", "required":
+    true}, {"type": "boolean", "name": "cp_2", "required": true}, {"type": "boolean",
+    "name": "cp_3", "required": true}, {"type": "boolean", "name": "cp_4", "required":
+    true}, {"type": "boolean", "name": "fbs_1", "required": true}, {"type": "boolean",
+    "name": "restecg_1", "required": true}, {"type": "boolean", "name": "restecg_2",
+    "required": true}, {"type": "boolean", "name": "exang_1", "required": true}, {"type":
+    "boolean", "name": "slope_2", "required": true}, {"type": "boolean", "name": "slope_3",
+    "required": true}, {"type": "boolean", "name": "ca_1.0", "required": true}, {"type":
+    "boolean", "name": "ca_2.0", "required": true}, {"type": "boolean", "name": "ca_3.0",
+    "required": true}, {"type": "boolean", "name": "thal_6.0", "required": true},
+    {"type": "boolean", "name": "thal_7.0", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-01-05 11:52:31.556618'
