@@ -7,6 +7,9 @@ import joblib
 import os
 from typing import List, Optional
 from datetime import datetime
+import logging
+import json
+
 
 # Initialize FastAPI
 app = FastAPI(
@@ -263,6 +266,57 @@ def predict_with_model(features: dict, model_name: str = None) -> dict:
 # ============================================
 # API Endpoints (same as before)
 # ============================================
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(message)s',
+    handlers=[
+        logging.FileHandler('api_logs.log'),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
+
+# Add these TWO new endpoints:
+
+@app.get("/logs")
+async def get_logs():
+    """Simple endpoint to view logs"""
+    try:
+        with open("api_logs.log", "r") as f:
+            logs = f.readlines()[-20:]  # Last 20 lines
+        return {"logs": logs}
+    except FileNotFoundError:
+        return {"logs": [], "error": "Log file not found"}
+
+@app.get("/metrics")
+async def get_metrics():
+    """Simple metrics endpoint"""
+    import os
+    import psutil
+    
+    log_exists = os.path.exists("api_logs.log")
+    log_size = os.path.getsize("api_logs.log") if log_exists else 0
+    
+    return {
+        "timestamp": datetime.now().isoformat(),
+        "log_file_size_bytes": log_size,
+        "log_file_exists": log_exists,
+        "api_status": "running"
+    }
+
+# Add this endpoint
+@app.get("/monitor")
+async def monitor():
+    """Simple monitoring endpoint"""
+    import os
+    log_size = os.path.getsize('api_requests.log') if os.path.exists('api_requests.log') else 0
+    
+    return {
+        "status": "monitoring_active",
+        "log_file": "api_requests.log",
+        "log_size_bytes": log_size,
+        "timestamp": datetime.now().isoformat()
+    }
 
 @app.get("/")
 async def root():
@@ -298,7 +352,13 @@ async def list_models():
 
 @app.post("/predict", response_model=SinglePrediction)
 async def predict(features: PatientFeatures):
+    # Log request
+    logging.info(f"PREDICT_REQUEST: {features.dict()}")
+
     result = predict_with_model(features.dict())
+    
+    # Log response
+    logging.info(f"PREDICT_RESPONSE: prediction={PredictionResult[0]}")
     
     return SinglePrediction(
         features=features,
